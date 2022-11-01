@@ -222,7 +222,7 @@ data.loadData().then(async () => {
         const testAcc = result[1].dataSync()[0];
 
         const probs = model.predict(testData.data);
-        const predictions = utils.binarize(probs).as1D();
+        const predictions = utils.binarize(probs, epochs).as1D();
 
         const precision =
             tf.metrics.precision(testData.target, predictions).dataSync()[0];

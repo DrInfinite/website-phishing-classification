@@ -27,6 +27,14 @@ const TEST_TARGET = 'test-target';
 
 /* It loads the data, normalizes it, and returns it as tensors */
 export class WebsitePhishingDataset {
+    /* Defining the variables. */
+    dataset: [any, any, any, any];
+    trainSize: number;
+    testSize: number;
+    trainBatchIndex: number;
+    testBatchIndex: number;
+    NUM_FEATURES: number;
+    NUM_CLASSES: number;
     /**
      * This function is used to create a new instance of the class DataSet.
      */
@@ -67,16 +75,16 @@ export class WebsitePhishingDataset {
      */
     async loadData() {
         this.dataset = await Promise.all([
-            utils.loadCsv(TRAIN_DATA), utils.loadCsv(TRAIN_TARGET),
-            utils.loadCsv(TEST_DATA), utils.loadCsv(TEST_TARGET)
+            utlis.loadCsv(TRAIN_DATA), utlis.loadCsv(TRAIN_TARGET),
+            utlis.loadCsv(TEST_DATA), utlis.loadCsv(TEST_TARGET)
         ]);
 
         let { dataset: trainDataset, vectorMeans, vectorStddevs } =
-            utils.normalizeDataset(this.dataset[0]);
+            utlis.normalizeDataset(this.dataset[0]);
 
         this.dataset[0] = trainDataset;
 
-        let { dataset: testDataset } = utils.normalizeDataset(
+        let { dataset: testDataset } = utlis.normalizeDataset(
             this.dataset[2], false, vectorMeans, vectorStddevs);
 
         this.dataset[2] = testDataset;
@@ -84,8 +92,8 @@ export class WebsitePhishingDataset {
         this.trainSize = this.dataset[0].length;
         this.testSize = this.dataset[2].length;
 
-        utils.shuffle(this.dataset[0], this.dataset[1]);
-        utils.shuffle(this.dataset[2], this.dataset[3]);
+        utlis.shuffle(this.dataset[0], this.dataset[1]);
+        utlis.shuffle(this.dataset[2], this.dataset[3]);
     }
 
     /**
