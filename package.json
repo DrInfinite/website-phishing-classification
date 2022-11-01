@@ -1,9 +1,9 @@
 {
-  "dependencies": {
-    "@tensorflow/tfjs": "^4.0.0",
-    "@tensorflow/tfjs-vis": "^1.4.1",
-    "awesome-typescript-loader": "^5.2.1",
-    "papaparse": "^5.3.2",
-    "source-map-loader": "^4.0.1"
-  }
+    "dependencies": {
+        "@tensorflow/tfjs": "^4.0.0",
+        "@tensorflow/tfjs-vis": "^1.4.1",
+        "awesome-typescript-loader": "^5.2.1",
+        "papaparse": "^5.3.2",
+        "source-map-loader": "^4.0.1"
+    }
 }
