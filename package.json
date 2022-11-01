@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.0.0",
+    "@tensorflow/tfjs-vis": "^1.4.1",
+    "papaparse": "^5.3.2"
+  }
+}
