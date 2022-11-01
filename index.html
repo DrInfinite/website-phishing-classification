@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classify Website URLs as Normal or Phishing Websites</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container centered-container">
+            <section class="title-area">
+                <h1>Classify Website URLs as Normal or Phishing Websites</h1>
+            </section>
+            <section>
+                <p class="section-head">Description</p>
+
+                <p>This example shows you how to classify URLs as <a
+                        href="https://en.wikipedia.org/wiki/Phishing">phishy</a> or
+                    normal using <a
+                        href="http://eprints.hud.ac.uk/id/eprint/24330/6/MohammadPhishing14July2015.pdf">Phishing
+                        Website Dataset</a>. Since we are classifying the elements of a given set into two groups ie.
+                    phishy or
+                    normal, this is a binary classification problem.</p>
+                <p><a href="https://github.com/tensorflow/tfjs-examples/tree/master/website-phishing">30 different
+                        features</a>
+                    are available for each site.</p>
+            </section>
+
+            <section>
+                <p class="section-head">Status</p>
+                <p id="status">Loading Data...</p>
+            </section>
+
+            <section>
+                <p class="section-head">Training Progress</p>
+
+                <div class="with-cols">
+                    <div id="plotLoss"></div>
+                    <div id="plotAccuracy"></div>
+                </div>
+
+                <div>
+                    <div>ROC Curves</div>
+                    <div id="rocCurve"></div>
+                </div>
+            </section>
+        </div>
+
+        <script type="module" src=""></script>
+    </body>
+
+</html>
