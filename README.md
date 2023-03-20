@@ -1,10 +1,10 @@
 # Classify Website URLs as Normal or Phishing Websites
 
-This example shows you how to classify URLs as [phishing URL](https://en.wikipedia.org/wiki/Phishing) or normal using [Phishing Website Dataset](http://eprints.hud.ac.uk/id/eprint/24330/6/MohammadPhishing14July2015.pdf). This is a binary classification problem as we split the given set into only two groups.
+This demo shows you how to classify URLs as [phishing URL](https://en.wikipedia.org/wiki/Phishing) or normal using [Phishing Website Dataset](http://eprints.hud.ac.uk/id/eprint/24330/6/MohammadPhishing14July2015.pdf). As we split any given input into 2 different groups, this can also be termed as a binary classification problem.
 
 ## Features
 
-The following features are available onthe dataseet:
+The following features are available on the dataseet:
 
 1. `HAVING_IP_ADDRESS`: Whether an IP adress is used as an alternate to a domain name. {-1, 1}
 2. `URL_LENGTH`: Whether URL length is legitimate, suspicious or phishing. {1, 0, -1}
@@ -36,17 +36,3 @@ The following features are available onthe dataseet:
 28. `GOOGLE_INDEX`: Whether web page is indexed by Google or not. {-1, 1}
 29. `LINKS_POINTING_TO_PAGE`: Whether links pointing to the page is equal to 0, between 0 and 2 or greater than 2. {-1, 0, 1}
 30. `STATISTICAL_REPORT`: Host belongs to top phishing IPs or domains or not. {-1, 1}
-
-## Usage
-
-Prepare the development enviroment to execute this project on your own:
-```sh
-$ npm install
-# Or
-$ yarn
-```
-
-To build and watch the example, run:
-```sh
-$ yarn watch
-```
